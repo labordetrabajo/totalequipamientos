@@ -2155,7 +2155,7 @@ header .logo a {
 	color: white;
 }
 #services .section-intro h5 {
-	color: #0dd348;
+	color: #e48321;;
 }
 #services .section-intro p {
 	color: rgb(255, 255, 255);
@@ -2289,13 +2289,13 @@ header .logo a {
 	padding-bottom: 7.2rem;
 }
 #contact .section-intro h1 {
-	color: #10c138;
+	color: #e48321;
 }
 #contact .section-intro h5 {
-	color: #0dd438;
+	color: #e48321;
 }
 #contact .section-intro p {
-	color: #10c138;
+	color: #e48321;
 }
 
 /* contact form */
@@ -2362,10 +2362,10 @@ header .logo a {
 #contact input[type="email"],
 #contact textarea {
 	width: 100%;
-	color: #10c138;
+	color: #000000;
 	margin-bottom: 0;
 	border: none;
-	border-bottom: 1px solid #10c138;
+	border-bottom: 1px solid #000000;
 }
 #contact input[type="text"],
 #contact input[type="password"],
