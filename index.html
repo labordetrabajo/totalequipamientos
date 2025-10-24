@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Total Equipamientos</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	
+	
+
+	<script>
+		function enviarFormulario(event) {
+		  event.preventDefault();
+		  const formulario = document.getElementById("contactForm");
+		  const datos = new FormData(formulario);
+	  
+		  fetch(formulario.action, {
+			method: formulario.method,
+			body: datos,
+			headers: {
+			  "Accept": "application/json"
+			}
+		  })
+		  .then(response => {
+			if (response.ok) {
+			  return response.json();
+			} else {
+			  throw new Error("Error al enviar el formulario");
+			}
+		  })
+		  .then(data => {
+			console.log(data);
+			alert("Gracias por contactarnos, su mensaje ha sido enviado correctamente");
+			formulario.reset();
+		  })
+		  .catch(error => {
+			console.error(error);
+			alert("Ocurrió un error al enviar el formulario, inténtelo de nuevo más tarde");
+		  });
+		}
+	  
+		// Asociar el evento al formulario
+		document.getElementById("contactForm").addEventListener("submit", enviarFormulario);
+	  </script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<a class="floating-whatsapp-button" href="https://wa.me/541126360185" target="_blank" class="btn-1">
+	<img src="./images/whatsapp-logo.png" alt="WhatsApp" />
+  </a>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>   	
+	<div class="row">
+		<div class="top-bar">
+			<a class="menu-toggle" href="#"><i class="fas fa-search"></i></a>
+
+			<div class="logo">
+			  <a href="index.html">Total Equipamientos</a>
+		   </div>		      
+
+			<nav id="main-nav-wrap">
+			<ul class="main-navigation">
+				<li class="current"><a class="smoothscroll" href="#intro">Inicio</a></li>
+				<li><a class="smoothscroll" href="#services">Sobre Nosotros</a></li>
+
+				<li class="has-submenu">
+				<a href="#portfolio" class="smoothscroll">Catálogo</a>
+				<ul class="submenu">
+					<li><a href="#modal-01">Bateas</a></li>
+					<li><a href="#modal-02">Picadora de Carne</a></li>
+					<li><a href="#modal-03">Exhibidora Verdulera</a></li>
+					<li><a href="#modal-04">Pozo de Frío</a></li>
+					<li><a href="#modal-05">Horno Convector</a></li>
+					<li><a href="#modal-06">Envasadora al Vacío</a></li>
+					<li><a href="#modal-07">Trinchadora Compacta</a></li>
+					<li><a href="#modal-08">Mini Cámara</a></li>
+				</ul>
+				</li>
+
+				<li><a class="smoothscroll" href="#contact">Contacto</a></li>
+			</ul>
+			</nav>	
+		</div> <!-- /top-bar --> 
+	</div> <!-- /row --> 		
+</header> <!-- /header -->
+
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">
+
+  <!-- 🎥 VIDEO DE FONDO -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="./videos/intro2.mp4" type="video/mp4">
+    
+  </video>
+
+  <div class="intro-overlay"></div>
+
+  <div class="intro-content">
+    <div class="row">
+      <div class="col-twelve">
+
+        
+        <div class="titulo-con-logo">
+          <img src="./images/logotitulo.jpg" alt="Total Equipamientos" class="logo-total">
+        </div>
+
+        <p class="intro-position">
+          <span>Emvasadoras</span>
+          <span>Cortadoras</span>
+          <span>Cámaras Frigoríficas</span>
+          <span>Exhibidoras</span>
+        </p>
+
+        <a class="button stroke smoothscroll" href="#portfolio">Catálogo</a>
+
+      </div>
+    </div>
+  </div>
+
+  <ul class="intro-social">
+    <li><a href="https://www.instagram.com/totalequipamientok/?hl=es-la" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="https://www.facebook.com/p/Totalequipamientocomercial-Moron-100082806952809/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+  </ul>
+
+</section>
+
+
+
+
+   </section> <!-- /process-->    
+
+
+   <!-- resume Section
+   ================================================== -->
+
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Equipamientos</h5>
+   			<h1>Nuestro catálogo</h1>
+
+   			<p class="lead"> 
+				Una amplia selección de equipamientos comerciales, cámaras, heladeras, exhibidoras, envasadoras, 
+				y todo lo que tu negocio necesita para funcionar al máximo</p>
+
+			  <!-- Marquesina -->
+				<!-- Marquesina fija a lo largo de la parte superior de la página -->
+				<div class="marquee-wrapper">
+					<div class="marquee">
+					<!-- Duplicamos el contenido para tener un scrolling continuo sin huecos -->
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					</div>
+				</div>
+				
+				<style>
+					/* Contenedor que ocupa toda la ventana y se posiciona fijo */
+					.marquee-wrapper {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100vw;              /* 100% de la vista horizontal */
+					background-color: #141412;   /* Puedes cambiar este color (ej. bg-lime-100) */
+					overflow: hidden;          /* Oculta lo que se salga del contenedor */
+					z-index: 1000;             /* Se ubica por encima de otros elementos */
+					padding: 0.5rem 0;         /* Ajusta el padding vertical, si lo deseas */
+					}
+					
+					/* Contenedor del texto en movimiento */
+					.marquee {
+					display: flex;
+					/* La anchura es el doble para tener dos copias del contenido */
+					width: 200%;
+					animation: marquee 25s linear infinite; /* Aumenta el valor (ej. 30s) para que sea más lento */
+					}
+					
+					/* Cada span ocupa el ancho completo de la ventana */
+					.marquee span {
+					display: inline-block;
+					width: 100vw;              /* 100% de la vista: se muestran uno tras otro */
+					font-weight: 600;
+					font-size: 1rem;           /* Puedes ajustar el tamaño del texto */
+					color: #f5aa08;            /* Cambia el color de la letra según tu preferencia */
+					}
+					
+					/* Keyframes para mover el contenido de derecha a izquierda */
+					@keyframes marquee {
+					0% { transform: translateX(0); }
+					100% { transform: translateX(-50%); }
+					}
+				</style>
+  
+
+			  <!-- Fin Marquesina -->
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/batea.jpg" alt="Suplementos">
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Bateas</h3>	     					    
+		     					    	 <span class="folio-types">
+											Permiten exhibir y conservar productos frescos como carnes, fiambres o bebidas, manteniendo la temperatura ideal en tu negocio.
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+
+					   			<!-- portfolio-wrapper -->
+								   <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+									<div class="bgrid folio-item">
+									  <div class="item-wrap">
+										  <img src="images/portfolio/trinchadora.jpg" alt="Trinchadora Compacta">
+										 <a href="#modal-07" class="overlay">	                  	           
+											<div class="folio-item-table">
+												<div class="folio-item-cell">
+														   <h3 class="folio-title">Trinchadora Compacta</h3>	     					    
+															 <span class="folio-types">
+																La trinchadora se utiliza para cortar, trozar o rebanar fiambres, carnes y quesos de forma precisa y uniforme.
+														   </span>
+													   </div>	                      	
+											</div>                    
+										 </a>
+									  </div>	               
+									   </div> <!-- /folio-item -->
+
+									   					   			<!-- portfolio-wrapper -->
+								   <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+									<div class="bgrid folio-item">
+									  <div class="item-wrap">
+										  <img src="images/portfolio/minicamara.jpg" alt="Veganos">
+										 <a href="#modal-08" class="overlay">	                  	           
+											<div class="folio-item-table">
+												<div class="folio-item-cell">
+														   <h3 class="folio-title">Mini Cámara</h3>	     					    
+															 <span class="folio-types">
+																Se utilizan para monitorear y registrar la actividad en tu negocio de forma discreta y segura.
+														   </span>
+													   </div>	                      	
+											</div>                    
+										 </a>
+									  </div>	               
+									   </div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/picadora.jpg" alt="PicadoraCarne">
+	               	<a href="#modal-02" class="overlay">              		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Picadora De Carne</h3>	     					    
+		     					    	<span class="folio-types">
+											Se utiliza para moler y procesar carne de manera rápida, uniforme y segura.
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/exhibidoraverduleta.jpg"alt="Semillas">
+	                  <a href="#modal-03" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Exhibidora Verdulera</h3>	     					    
+		     					    	<span class="folio-types">
+											Se utilizan para organizar y mostrar frutas y verduras de forma atractiva y accesible para el cliente.
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/pozodefrio.jpg" alt="Apicolas">
+	                  <a href="#modal-04" class="overlay">                  	                 
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Pozo de Frío</h3>	     					    
+		     					    	<span class="folio-types">
+											El pozo de frío se utiliza para conservar y exhibir productos refrigerados, manteniendo su frescura y temperatura ideal.
+		     					      </span>		     		
+		     					   </div>  	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->     
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/hornoconvector.jpg" alt="Celiacos">
+	                  <a href="#modal-05" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Horno Convector</h3>	     					    
+		     					    	<span class="folio-types">
+											Se utiliza para cocinar, hornear o calentar alimentos de forma pareja y eficiente mediante la circulación de aire caliente.
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/envasadora.jpg" alt="Frutos">
+	                  <a href="#modal-06" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Envasadora Al Vacío</h3>	     					    
+		     					    	<span class="folio-types">
+											Se utiliza para conservar alimentos eliminando el aire del envase y prolongando su vida útil.
+		     					      </span>		     		
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	            <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/batea.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Bateas</h4>		      
+					      <p>Son equipos esenciales para comercios que necesitan 
+							exhibir productos frescos manteniendo su calidad y temperatura. Ideal para 
+							carnicerías, almacenes, supermercados y rotiserías, su diseño abierto y accesible 
+							 Fabricada con materiales resistentes y un sistema de refrigeración eficiente, 
+							 garantiza una excelente presentación y conservación de alimentos como carnes, fiambres, lácteos y bebidas.</p>
+
+					      <div class="categories">Bateas</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20batea-premium" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>	      
+
+				   </div> <!-- /modal-01 -->
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/picadora.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Picadora de Carne</h4>		      
+					      <p>Es un equipo fundamental en carnicerías, supermercados y locales gastronómicos. Diseñada 
+							para procesar distintos tipos de carne de forma eficiente, permite obtener una molienda homogénea 
+							ideal para la preparación de hamburguesas, embutidos o rellenos. Su estructura robusta y componentes 
+							de acero inoxidable garantizan durabilidad, fácil limpieza y cumplimiento con las normas de higiene. 
+							Disponible en distintos tamaños y potencias, se adapta a las necesidades de cada negocio.</p>
+
+					      <div class="categories">Picadoras</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20Hierbas%20Picadora De Carne" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>	      
+
+				   </div> <!-- /modal-02 -->
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/exhibidoraverduleta.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Exhibidora Verdulera</h4>		      
+					      <p>Son estructuras diseñadas para exhibir y conservar frutas y verduras de manera ordenada y 
+							visualmente atractiva. Fabricadas en materiales resistentes como madera, metal o melamina, permiten
+							 una excelente presentación de los productos frescos, facilitando la reposición y limpieza diaria. Su 
+							 diseño ergonómico y modular se adapta a diferentes espacios comerciales, mejorando la estética del local 
+							 y promoviendo una experiencia de compra cómoda y organizada para los clientes.</p>
+					      <div class="categories">Exhibidoras</div>			               
+					   </div>
+
+					   <div class="link-box">
+							<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20Hierbas%20Exhibidora Verdulera" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>		      
+
+				   </div> <!-- /modal-03 -->
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/pozodefrio.jpg" alt="Pozo de Frío" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Pozo de Frío</h4>		      
+					      <p>Es un equipo de refrigeración diseñado para almacenar y exhibir productos que requieren baja 
+							temperatura, como bebidas, lácteos, fiambres o alimentos congelados. Su estructura profunda y de 
+							fácil acceso permite una excelente capacidad de carga y una conservación uniforme del frío en todo 
+							su interior. Ideal para supermercados, almacenes y kioscos, combina eficiencia energética, durabilidad 
+							y un diseño práctico que facilita la visualización y venta de los productos.</p>
+
+					      <div class="categories">Heladeras</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20Productos%20Pozo de Frío" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>		      
+
+				   </div> <!-- /modal-04 -->
+
+				   <div id="modal-05" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/hornoconvector.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Horno Convector Eléctrico</h4>		      
+					      <p>es un equipo profesional ideal para panaderías, rotiserías, locales gastronómicos y 
+							supermercados. Su sistema de ventiladores distribuye el calor de manera uniforme en toda 
+							la cámara, logrando una cocción rápida y pareja sin necesidad de girar las bandejas. Permite
+							 preparar panes, facturas, pastas, carnes, verduras y una amplia variedad de alimentos con resultados 
+							 consistentes y de alta calidad. Fabricado en acero inoxidable y con controles precisos de temperatura y
+							  tiempo, ofrece durabilidad, eficiencia energética y facilidad de limpieza.</p>
+
+					      <div class="categories">Hornos</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20Productos%20Sin%20Gluten" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>		      
+
+				   </div> <!-- /modal-05 -->
+
+				   <div id="modal-06" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/envasadora.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Envasadora al Vacío</h4>		      
+					      <p>Es un equipo indispensable para carnicerías, fiambrerías, 
+							rotiserías y comercios gastronómicos que buscan mantener la frescura y 
+							calidad de sus productos por más tiempo. Su funcionamiento elimina el aire del interior de la
+							 bolsa y sella herméticamente, evitando la oxidación, la descomposición y la pérdida de sabor o textura.
+							  Ideal para carnes, fiambres, quesos, verduras y alimentos preparados, ayuda a optimizar el almacenamiento 
+							  y reducir desperdicios. Construida en materiales resistentes y de fácil limpieza, combina practicidad, eficiencia y durabilidad en cada uso.</p>
+
+					      <div class="categories">Envasadoras</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20Evasadora al Vacío" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>	      
+
+				   </div> <!-- /modal-06 -->
+
+				   <div id="modal-07" class="popup-modal slider mfp-hide">	
+
+					<div class="media">
+						<img src="images/portfolio/modals/trinchadora.jpg" alt="" />
+					</div>      	
+
+				  <div class="description-box">
+					 <h4>Trinchadora Compacta</h4>		      
+					 <p>Es una herramienta indispensable en comercios gastronómicos, fiambrerías y supermercados.
+						 Su sistema de cuchilla giratoria permite realizar cortes uniformes y regulables en fiambres, 
+						 carnes o quesos, optimizando el tiempo de trabajo y mejorando la presentación del producto. Fabricada
+						  en materiales resistentes y fáciles de limpiar, ofrece seguridad, precisión y durabilidad en el uso diario</p>
+
+					 <div class="categories">Trinchadora Compacta</div>			               
+				  </div>
+
+				  <div class="link-box">
+					<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20Trinchadora-Compacta" target="_blank" rel="noopener noreferrer">Consultar</a>
+					<a href="#" class="popup-modal-dismiss">Volver</a>
+				  </div>	      
+
+			  </div> <!-- /modal-08 -->
+
+			  <div id="modal-08" class="popup-modal slider mfp-hide">	
+
+				<div class="media">
+					<img src="images/portfolio/modals/minicamara.jpg" alt="" />
+				</div>      	
+
+			  <div class="description-box">
+				 <h4>Minicámara</h4>		      
+				 <p>Son una solución práctica y compacta para mantener el control y la 
+					vigilancia en tu comercio. Su tamaño reducido permite instalarlas fácilmente en cualquier espacio, 
+					sin afectar la estética del lugar. Ofrecen alta resolución, grabación continua o por detección de movimiento, 
+					y conexión remota para visualizar en tiempo real desde tu celular o computadora. Ideales para reforzar la seguridad
+					 y proteger tus productos, empleados y clientes.</p>
+
+				 <div class="categories">Cámaras</div>			               
+			  </div>
+			  <div class="link-box">
+				<a href="https://wa.me/541126360185?text=Hola%21%20Quiero%20consultar%20por%20Productos%20Minicámara" target="_blank" rel="noopener noreferrer">Consultar</a>
+				<a href="#" class="popup-modal-dismiss">Volver</a>
+			  </div>	      
+
+		  </div> <!-- /modal-08 -->
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper --> 
+
+   		</div>  <!-- /twelve -->   
+
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+
+
+	<!-- CTA Section
+   ================================================== -->
+
+
+	
+	<!-- services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Sobre Nosotros</h5>
+   			<h1>Comprometidos con tu negocio</h1>
+
+   			<p class="lead">Somos especialistas en equipamientos comerciales, con años de experiencia brindando soluciones integrales 
+				para todo tipo de negocios. Ofrecemos productos de alta calidad, asesoramiento personalizado y los mejores precios del mercado.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+
+	      	<div class="service">	
+
+				<span class="icon"><i class="icon-shopping-cart"></i></span>
+      
+
+	            <div class="service-content">	
+
+	            	 <h3>Amplia Variedad</h3>
+
+		            <p class="desc">Contamos con una extensa gama de equipamientos comerciales para todo tipo de negocios. Desde heladeras 
+						y vitrinas exhibidoras hasta balanzas, hornos y maquinarias industriales, ofrecemos soluciones adaptadas a cada necesidad.
+	         		</p>
+	         		
+	         	</div> 	         	 
+
+				</div> <!-- /service -->
+
+				<div class="service">	
+
+					<span class="icon"><i class="fas fa-phone"></i></span>
+                       
+
+	            <div class="service-content">	
+
+	            	<h3>Atención telefónica</h3>  
+
+		            <p class="desc">Brindamos un servicio de atención telefónica personalizado para responder tus consultas, tomar pedidos y asesorarte sobre nuestros productos. Comunícate con nosotros y te ayudaremos con lo que necesites.
+	         		</p>
+
+	            </div>	                          
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+				<span class="icon"><i class="icon-truck"></i></span>
+	            
+
+	            <div class="service-content">
+
+	            	<h3>Entrega a domicilio</h3>
+
+		            <p class="desc"> Te llevamos el equipamiento directamente a tu negocio. Ofrecemos envíos rápidos, 
+						seguros y coordinados para que no pierdas tiempo y puedas comenzar a trabajar cuanto antes.
+	        			</p> 
+
+	            </div> 	            	               
+
+			   </div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="fas fa-cogs"></i></span>
+
+              
+
+	            <div class="service-content">
+
+	            	<h3>Equipos de Calidad</h3>
+
+		            <p class="desc">Priorizamos la eficiencia y la durabilidad, por eso trabajamos con equipamientos de 
+						alta calidad, fabricados con materiales resistentes y tecnología confiable. Garantizamos rendimiento y larga vida útil en cada producto.
+	         		</p> 
+	         		
+	            </div>                
+
+				</div> <!-- /service -->
+
+			   <div class="service">
+
+				<span class="icon"><i class="fas fa-tag"></i></span>
+	            
+
+	            <div class="service-content">
+
+	            	<h3>Promociones y Descuentos</h3>
+
+		            <p class="desc">Aprovechá nuestras ofertas especiales en equipamientos comerciales. Renovamos nuestras promociones constantemente para que puedas equipar tu negocio con productos de calidad al mejor precio.
+	        			</p> 
+
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
+
+	            <div class="service-content">
+
+	            	 <h3>Asesoramiento para tu Negocio</h3>
+
+		            <p class="desc">Nuestro compromiso es acompañarte en cada paso. Te orientamos en la elección de equipos, instalación y mantenimiento para que tu emprendimiento funcione al máximo rendimiento.
+	        			</p> 
+	        			
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+	      </div> <!-- /services-list -->
+   		
+   	</div> <!-- /services-content -->
+		
+	</section> <!-- /services -->	
+
+	<!-- OCULTO -->
+
+   <!-- stats Section
+
+	<section id="stats" class="count-up">
+
+		<div class="row">
+			<div class="col-twelve">
+
+				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-leaf" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							30
+						</h3>
+
+						<h5 class="stat-title">
+							variedades de semillas
+						</h5>
+
+					</div> 					
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							20
+						</h3>
+
+						<h5 class="stat-title">
+							suplementos nutricionales 
+						</h5>
+
+					</div>
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-archive" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							40
+						</h3>
+
+						<h5 class="stat-title">
+							productos sin tac
+						</h5>
+
+					</div>									
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-pagelines" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							20
+						</h3>
+
+						<h5 class="stat-title">
+							hierbas medicinales
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-medkit" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							20
+						</h3>
+
+						<h5 class="stat-title">
+							productos diabéticos
+						</h5>
+
+					</div>
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-clock"></i>
+						</div>
+
+						<h3 class="stat-count">
+							6
+						</h3>
+
+						<h5 class="stat-title">
+							dias a la semana abierto
+						</h5>
+
+					</div> 
+
+				</div> 
+
+			</div> 
+		</div>
+
+	</section>
+
+	================================================== -->
+	
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contacto</h5>
+   			<h1>Contactate con nosotros te responderemos en la brevedad</h1>
+
+   			<p class="lead">Podes realizar tu pedido, preguntar precios y promociones.</p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+	   <div class="row contact-form">
+
+		<div class="col-twelve">
+	  
+		  <!-- form -->
+	<!-- FORMULARIO -->
+<form name="sentMessage" id="contactForm" action="https://formspree.io/f/xwprapva" method="POST" onsubmit="enviarFormulario(event)">
+	<fieldset>
+	  <div class="form-field">
+		<input name="contactName" type="text" id="contactName" placeholder="Nombre"
+		  style="color: rgb(245, 97, 11);" minlength="2" required>
+	  </div>
+  
+	  <div class="form-field">
+		<input name="email" type="email" id="contactEmail" placeholder="Email"
+		  style="color: rgb(245, 97, 11);" minlength="2" required>
+	  </div>
+  
+	  <div class="form-field">
+		<input name="contactSubject" type="text" id="contactSubject" placeholder="Asunto"
+		  style="color: rgb(245, 97, 11);" minlength="2" required>
+	  </div>
+  
+	  <div class="form-field">
+		<textarea name="message" id="contactMessage" placeholder="Mensaje" rows="10" cols="50" required
+		  style="color: rgb(245, 97, 11);" minlength="2"></textarea>
+	  </div>
+  
+	  <div class="form-field">
+		<button class="submitform" type="submit">Enviar</button>
+	  </div>
+	</fieldset>
+  </form>
+	  
+		  <!-- contact-warning -->
+		  <div id="message-warning"></div>
+	  
+		  <!-- contact-success -->
+		  <div id="message-success">
+			<i class="fa fa-check"></i>Tu mensaje fue enviado, ¡gracias!<br>
+		  </div>
+	  
+		</div> <!-- /col-twelve -->
+	  
+	  </div> <!-- /contact-form -->
+	  
+
+</div> <!-- /contact-info -->
+
+<div style="width: 100%; height: 400px;">
+ <iframe 
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.690881089686!2d-58.685662900000004!3d-34.6877504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc0f388325ed3%3A0xbe086edd236fa612!2sBoulogne%20Sur%20Mer%2060%2C%20B1716NMB%20Libertad%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1760475702121!5m2!1ses!2sar" 
+   width="100%" 
+   height="100%" 
+   style="border:0;" 
+   allowfullscreen="" 
+   loading="lazy" 
+   referrerpolicy="no-referrer-when-downgrade">
+ </iframe>
+</div>
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Dirección</h5>
+
+   			<p  style="text-decoration: none; color: rgb(16, 17, 16); font-weight: bold;">
+            Boulogne Sur Mer 60<br>
+            Libertad, Buenos Aires
+            </p>
+
+   		</div>
+		   <div class="col-four tab-full">
+			<div class="icon">
+				<i class="icon-mail"></i>
+			</div>
+			<h5>Correo</h5>
+			<p style="text-decoration: none; color: rgb(10, 117, 28); font-weight: bold;">
+				<a href="mailto:Dietetica.Girasol@hotmail.com" style="color: rgb(34, 32, 32);">orlandomazul@hotmail.com</a>
+			</p>
+		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Teléfono</h5>
+
+   			<p style="text-decoration: none; color:rgb(0, 0, 0); font-weight: bold;">
+				<i class="fab fa-whatsapp" style="text-decoration: none; color: rgb(20, 20, 20); font-weight: bold;"></i> 1126360185
+			  </p>
+			  
+
+   		</div>  
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			      <li><a href="https://www.instagram.com/totalequipamientok/?hl=es-la" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			   </ul> 
+	      		
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© soluciones programables.</span> 
+		        	<span>Programado por <a href="https://www.solucionesprogramables.com.ar/" target="_blank">Soluciones Programables</a></span>
+         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
